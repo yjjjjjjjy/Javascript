@@ -6,6 +6,7 @@ const bgImage=document.createElement("img");
 
 bgImage.src=`img/${chosenImage}`;
 
+//append는 맨뒤, prepend는 맨위
 document.body.appendChild(bgImage);
 
 

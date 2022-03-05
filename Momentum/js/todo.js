@@ -20,7 +20,13 @@ function deleteToDo(event) {
         return todo.id!==parseInt(li.id)
     };
     li.remove();
+    //array의 item삭제는 실제로 배열에서 삭제되는 것이 아님
+    //삭제하고 싶은 item을 제외하고 새로운 array를 만듬==>filter함수 사용
     toDos=toDos.filter(toDoFilter);
+    // 화살표함수로 표현
+    // toDos=toDos.filter((todo)=>{
+    //     return todo.id!==parseInt(li.id);
+    // });
     saveToDos();
 }
 
@@ -64,7 +70,4 @@ if(savedToDos!==null) {
     //forEach() 사용: patinrToDO를 parsedToDos 배열의 요소마다 실행
     parsedToDos.forEach(paintToDo);
 }
-
-//array의 item삭제는 실제로 배열에서 삭제되는 것이 아님
-//삭제하고 싶은 item을 제외하고 새로운 array를 만듬==>filter함수 사용
 

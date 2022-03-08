@@ -16,10 +16,10 @@ function deleteToDo(event) {
     //click이벤트의 target(클릭된 HTML element)중 parentElement(부모요소)
     //button의 부모요소는 li
     const li=event.target.parentElement;
+    li.remove();
     function toDoFilter(todo) {
         return todo.id!==parseInt(li.id)
     };
-    li.remove();
     //array의 item삭제는 실제로 배열에서 삭제되는 것이 아님
     //삭제하고 싶은 item을 제외하고 새로운 array를 만듬==>filter함수 사용
     toDos=toDos.filter(toDoFilter);

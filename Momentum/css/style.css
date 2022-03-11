@@ -13,7 +13,8 @@ img{
 header{
     color:#fff;
     display: inline-block;
-    text-align: center;
+    padding: 20px;
+    margin-left: 30px;
 }
 
 main{
@@ -27,7 +28,7 @@ main{
 }
 
 #login-form input[type=text]{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     width: 78%;
     height: 30px;
     padding: 20px 0;
@@ -48,8 +49,55 @@ main{
    display: none;
 }
 
+#todo{
+    width: 350px;
+    margin: auto;
+}
+
+#todo-form input[type=text]{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    background:	#F08080;
+    border: none;
+    text-align: center;
+}
+
+#todo-form input[type=text]:focus{
+    outline: none;
+}
+
+#todo-form input[type=text]::placeholder{
+    color: #fff;
+    text-align: center;
+}
+
+#todo ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#todo ul li{
+    background: #fff;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#todo ul button{
+    color: red;
+    background: #fff;
+    border: none;
+    float: right;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
 .hidden{
-    display: none;
+    display:none;
 }
 
 #greeting{
